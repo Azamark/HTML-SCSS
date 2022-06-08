@@ -1,0 +1,154 @@
+.header{
+    min-height: 75px;
+    background: #222222;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 18px;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__left{
+        & a{
+            margin-right: 41px;
+            display: inline-block;
+            transition: 1s;
+            &:hover{
+                transform: rotateY(360deg);
+            }
+        }
+    }
+
+    &__menu{
+        margin-right: 33px;
+    }
+
+    &__item{
+        display: inline-block;
+        &:not(:last-child){
+            margin-right: 33px;
+        }
+    }
+}
+
+.nav{
+    width: 232px;
+    background-color: white;
+    height: calc(100vh - 75px);
+    padding-top: 37;
+    padding-left: 34px;
+
+    &__menu{
+        position: absolute;
+        top: 75px;
+        right: -140px;
+        z-index: 10;
+    }
+
+    &__wrap{
+        position: relative;
+    }
+
+    &__close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+     }
+
+     &__title{
+        padding-top: 37px;
+        padding-bottom: 24px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    &__headig{
+        color: #F16D7F;
+        padding-bottom: 12px;
+    }
+
+    &__items{
+        list-style-type: none;
+        padding-left: 22px;
+        padding-bottom: 20px;
+    }
+    
+    &__point{
+        & > a{
+            text-decoration: none;
+        }
+    }
+}
+
+
+#burger{
+    display: none;
+}
+
+#burger:checked ~ .nav__menu{
+    display: block;
+}
+
+#burger:not(:checked) ~ .nav__menu{
+    display: none;
+}
+
+
+@media (max-width: 1024px){
+    .nav{
+        width: 232px;
+        background-color: white;
+        height: calc(100vh - 63px);
+        padding-top: 37;
+        padding-left: 34px;
+    
+        &__menu{
+            position: absolute;
+            top: 75px;
+            right: 0px;
+            z-index: 10;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .nav{
+        width: 232px;
+        background-color: white;
+        height: calc(50vh - 63px);
+        padding-top: 37;
+        padding-left: 34px;
+    
+        &__menu{
+            position: absolute;
+            top: 75px;
+            right: 0px;
+            z-index: 10;
+            overflow: scroll;
+
+            & .nav__wrap{
+                overflow: scroll;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 670px){
+    .header{
+
+        &__right{
+            align-self: center;
+        }
+        
+        &__item{
+            &:not(:first-child){
+                display: none;
+            }
+        }
+    }
+}
+

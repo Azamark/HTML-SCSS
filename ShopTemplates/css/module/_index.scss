@@ -1,0 +1,301 @@
+.heading{
+    &__bckgnd{
+        background-color: #F1E4E6;
+        height: calc(100vh - 75px);
+    }
+
+    &__top{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        background-image: url(../img/main/human.png);
+        background-position-x: -150px;
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__main{
+        max-width: 405px;
+        padding-left: 20px;
+        border-left: 12px solid #F16D7F;
+
+        &--size{ 
+            font-size: 48px;
+            line-height: 58px;
+        }
+
+        &--decor{
+            color: #F16D7F;
+        }
+    }
+}
+
+.main{
+    &__category{
+
+        margin: 65px 0;
+
+        .category__flex{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .category__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32%;
+            min-height: 260px;
+
+            &:last-child{
+                 min-height: 180px;
+                width: 100%;
+            }
+        }
+
+        .category__flex .women{
+            background: url(../img/main/women.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+            
+        .category__flex .men{
+            background: url(../img/main/men.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+            
+        .category__flex .kids{
+            background: url(../img/main/kids.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .category__flex .accesories{
+            background: url(../img/main/ACCESORIES.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-top: 30px;
+        }
+
+        & h3{
+            max-width: 159px;
+            font-size: 16px;
+            line-height: 19px;
+            color: #FFFFFF;
+            text-align: center;
+
+            & > span{
+                color: #F16D7F;
+            }
+        }
+        
+        & a{
+            text-decoration: none;
+        }
+    }
+
+    &__items{
+        margin-top: 96px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h2{
+            font-size: 30px;
+            line-height: 36px;
+            color: #222222;
+            text-align: center;
+            padding-bottom: 6px;
+        }
+
+        & h4{
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+
+            & a{
+                text-decoration: none;
+            }
+        }
+
+        & p{
+            font-size: 14px;
+            line-height: 17px;
+            color: #9F9F9F;
+            text-align: center;
+        }
+
+        &--flex{
+            margin-top: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__btn{
+        margin: 48px 0 95px 0;
+        text-align: center;
+        padding: 15px 39px;
+        text-decoration: none;
+        display: inline-block;
+        align-self: center;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        border: 1px solid #FF6A6A;
+        transition: 0.7s;
+
+        &:hover{
+            transform: scale(1.1);
+            background: #F16D7F;
+            color: #FFFFFF;
+        }
+    }
+
+    &__service{
+        background: #222224;
+
+        &--flex{
+            min-height: 341px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+@media(max-width:1024px){
+    .main{
+        &__items--flex{
+            margin-top: 72px;
+            gap: 16px;
+        }
+
+        &__service{
+
+            min-height: 610px;
+            padding: 48px 204px 64px 204px;
+
+            &--flex{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 48px;
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .heading{
+
+        &__top{
+            height: calc(50vh - 63px);
+            background-position: -90px;
+        }
+    }
+
+    .main{
+        &__category{
+    
+            margin-top: 65px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 19px;
+    
+            &--flex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 155px;
+                
+                &:not(:last-child){
+                    width: 232px;
+                    height: 168px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:670px){
+    .heading{
+
+        &__top{
+            height: calc(50vh - 63px);
+            background-image: none;
+            max-width: 320px;
+            align-items: center;
+        }
+
+        &__main{
+            padding-left: 10px;
+            border-left: 12px solid #F16D7F;
+        }
+    }
+
+    .main{
+        &__category{
+    
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+    
+            &--flex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 111px;
+                background-size: cover;
+                
+                &:not(:last-child){
+                    width: 100%;
+                    height: 247px;
+                }
+
+                & a{
+                    text-align: center;
+                }
+            }
+        }
+
+        &__service{
+
+            min-height: 96px;
+            padding: 48px 13px 81px 13px;
+
+            &--flex{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 48px;
+            }
+        }
+    }
+}
+
+@import "_item.scss";
+@import "_service.scss";
+

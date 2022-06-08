@@ -1,0 +1,24 @@
+.service{
+    &__item{
+        min-width: 104px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h4{
+            text-align: center;
+            font-size: 19.96px;
+            line-height: 24px;
+            color: #FBFBFB;
+            margin: 28px 0 16px 0;
+        }
+
+        & p{
+            padding: 0 27px 0 27px;
+            text-align: center;
+            font-size: 13.97px;
+            line-height: 17px;
+            color: #FBFBFB;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.filter{
+    &__check{
+        margin-left: 30px;
+        position: relative;
+
+        &--flex{
+            padding-top: 13px;
+            display: flex;
+            gap: 28px;
+
+            & > details{
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+
+                &[open]{
+
+                    & > summary{
+                        color: #F16D7F;
+
+                        & > svg{
+
+                            fill: #F16D7F;
+                        }
+                    }
+                }
+
+               & > summary{
+                    display: block;
+                    list-style: none;
+
+                    & > svg{
+                        margin-left: 11px;
+                        fill: #6F6E6E;
+                    }
+               } 
+
+               & .check__list{
+                    width: fit-content;
+                    height: 103px;
+                    position: absolute;
+                    z-index: 4;
+                    background: white;
+                    margin-top: 1px;
+                    padding: 9px 30px 12px 9px;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+                    & > ul{
+                        list-style: none;
+
+                        & > li{
+                            display: block;
+                            align-items: center;
+                        }
+
+                        & > input{
+                            margin-right: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
